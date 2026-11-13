@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "A strict gap in the noisy-GHZ equality question of Xu et al., Section 4.2, page 12 of arXiv:2211.05563v1"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-05"
+version: "1"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/xu-et-al-2023-noisy-ghz-witness-bound-gap?version=1"
+doi: "10.5281/zenodo.23919079"
+license: "CC-BY-4.0"

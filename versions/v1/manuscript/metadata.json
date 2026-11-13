@@ -1,0 +1,15 @@
+{
+  "id": "xu-et-al-2023-noisy-ghz-witness-bound-gap",
+  "revision": 1,
+  "problem_ids": ["xu-et-al-2023-noisy-ghz-witness-bound-gap"],
+  "topic": "The noisy-GHZ optimized-witness equality question in Xu et al., arXiv:2211.05563v1, Section 4.2, page 12",
+  "title": "A strict gap in the noisy-GHZ equality question of Xu et al., Section 4.2, page 12 of arXiv:2211.05563v1",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "The question in Xu et al., Section 4.2, page 12 of arXiv:2211.05563v1, asks whether the optimized witness bound equals the convex-roof geometric measure of genuine multipartite entanglement for noisy GHZ states. A strict separation holds for every party count n >= 3 and local dimension d >= 3 at an explicit noise probability. For three qutrits at noise p=3/8, the optimized witness bound is exactly 1/9, whereas the convex roof is at least 13/108. A biseparable overlap inequality and a positive-definite matrix give a two-observable lower bound. A written corollary extends the three-qutrit strict gap throughout 27/74 < p < 9/22.",
+  "summary": "A strict gap holds at an explicit noise probability for every n,d >= 3. At n=d=3 and p=3/8, epsilon=1/9 < 13/108 <= E_G; strict separation also holds for 27/74 < p < 9/22. The pinned Lean declaration refutes universal equality through the base-case inequalities; the exact optimized value, generalization and interval are written proofs, supplemented by exact finite arithmetic checks.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/cc684e6326490f9173bfefcadb0294ee6ccbb0b5/D5/S3/Quantum/Entanglement/Witness/NoisyGhzWitnessBoundGap.lean"
+}

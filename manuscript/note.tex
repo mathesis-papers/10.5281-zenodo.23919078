@@ -1,0 +1,302 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\EG}{E_{\mathrm G}}
+\newcommand{\eps}{\epsilon_{\mathrm o}}
+\title{A strict gap in the noisy-GHZ equality question of Xu et al.,\protect\\
+Section 4.2, page 12 of arXiv:2211.05563v1}
+\author{Haobo Ma\thanks{ChronoAI Pte Ltd, Singapore.}\and
+Wenlin Zhang\thanks{National University of Singapore; ChronoAI Pte Ltd, Singapore.}}
+\date{November 2, 2026\quad\textnormal{CC BY 4.0}}
+\begin{document}
+\maketitle
+\begin{abstract}
+The question in Xu et al., Section 4.2, page 12 of arXiv:2211.05563v1,
+asks whether the optimized witness bound equals the convex-roof geometric
+measure of genuine multipartite entanglement for noisy GHZ states.
+We give a strict separation for every party count $n\geq3$ and local dimension
+$d\geq3$, at an explicitly specified noise probability.
+For three qutrits at noise $p=3/8$, the optimized witness bound is exactly
+$1/9$, whereas the convex roof is at least $13/108$.
+The proof combines a biseparable overlap inequality with a positive-definite
+matrix and identifies the extra information supplied by the population
+outside the witness-support subspace.
+\end{abstract}
+
+\section{The question and the witness}
+Xu et al.\ \cite[Section 4.2, Eqs.~(21)--(26), pp.~11--12]{xu}
+ask whether $\eps^{n,d}(p)=\EG(\rho_{n,d}(p))$ for their optimized GHZ witness.
+Here the geometric measure is relative to \emph{biseparable} pure states,
+not just fully product states. The convex-roof convention and the
+single-observable optimization are those in that source.
+The optimization of entanglement bounds from witness data is developed
+by G\"uhne, Reimpell and Werner\ \cite{guhne}; their subsequent work treats
+incomplete information and multiple observables\ \cite[Section II]{incomplete}.
+The fidelity comparison in
+Xu et al., Eq.~(22), is based on Dai et al.\ \cite{dai}.
+Our separating inequality uses the same witness as Xu et al., without
+changing its normalization or its set of biseparable states.
+
+Let $\mathcal H=(\mathbb C^d)^{\otimes n}$, $M=d^n$, and put
+\[
+ \ket g=\frac1{\sqrt d}\sum_{j=0}^{d-1}\ket j^{\otimes n},\qquad
+ G=\ket g\bra g,\qquad \rho(p)=\frac pM I+(1-p)G.
+\]
+Let $P$ be the diagonal projector onto computational words containing at
+most two distinct symbols, and let $Q=I-P$. Distinct arrangements in
+Xu et al., Eq.~(23), are counted once; their witness is precisely
+\begin{equation}\label{eq:W}
+ W=P/d-G.
+\end{equation}
+There are $d$ constant words and $\binom d2(2^n-2)$ words containing exactly
+two symbols. Thus
+\begin{equation}\label{eq:rank}
+ R=\tr P=d+\binom d2(2^n-2),\qquad
+ w(p)=\tr(\rho(p)W)=-\frac{d-1}{d}+k p,
+ \quad k=\frac{d-1}{d}+\frac{R/d-1}{M}.
+\end{equation}
+The complement has positive rank when $n,d\geq3$, since a word using three
+different symbols then exists.
+For $d=2$, every computational word lies in $P$, so $W=I/2-G$ is the
+fidelity witness. The optimized witness and fidelity bounds therefore
+coincide, as stated in the caption of Xu et al., Fig.~3.
+
+For a unit vector $\psi$ and a density operator $\rho$, define
+\[
+ \EG(\psi)=1-\max_{\phi\text{ biseparable},\ \|\phi\|=1}
+                   |\langle\phi,\psi\rangle|^2,\qquad
+ \EG(\rho)=\inf_{\rho=\sum_i t_i\ket{\psi_i}\bra{\psi_i}}
+                    \sum_i t_i\EG(\psi_i),
+\]
+where the ensembles are finite, the weights are nonnegative and sum to one,
+and their vectors have unit norm. For real $r$, set
+\[
+ \widehat E(rW)=\sup_{\|\psi\|=1}\{r\langle\psi,W\psi\rangle-\EG(\psi)\},
+ \qquad \epsilon(w)=\sup_{r\in\mathbb R}\{rw-\widehat E(rW)\}.
+\]
+The expression for $\widehat E$ agrees with the two-vector optimization
+in Xu et al., Eq.~(25). For the noisy state, $\eps^{n,d}(p)=\epsilon(w(p))$.
+Every affine lower bound on pure-state entanglement extends to the
+convex roof by averaging, so $\epsilon(w(p))\leq\EG(\rho(p))$.
+
+\begin{theorem}\label{thm:all}
+For every $n,d\geq3$, define
+\[
+ T=d^2-3d+3,\quad
+ w_*=-\frac{2d-3}{dT},\quad
+ p_* =\frac{(d-2)^2}{Tk},\quad
+ e_* =\frac1{(d-1)^3+1},\quad
+ h=\frac1{d^2(d-2)},
+\]
+with $k$ as in \eqref{eq:rank}. Then $0<p_*<1$, $w(p_*)=w_*$, and
+\begin{equation}\label{eq:gap}
+ \eps^{n,d}(p_*)=e_* < e_*+h p_*\left(1-\frac RM\right)
+                  \leq \EG(\rho(p_*)).
+\end{equation}
+In particular, for $n=d=3$ one has $p_*=3/8$ and
+\begin{equation}\label{eq:qutrit}
+ \eps^{3,3}(3/8)=\frac19=\frac{12}{108}
+       <\frac{13}{108}\leq\EG(\rho_{3,3}(3/8)).
+\end{equation}
+\end{theorem}
+
+\section{A two-observable lower bound}
+The following overlap inequality is the reason that the same certificate
+works in all dimensions and party counts.
+\begin{lemma}\label{lem:cut}
+For every biseparable unit vector $\phi$,
+$d\langle\phi,G\phi\rangle\leq\langle\phi,P\phi\rangle$.
+\end{lemma}
+\begin{proof}
+Choose a nonempty proper cut $A\mid A^c$ across which
+$\phi=u\otimes v$. For each symbol $j$, let $u_j$ and $v_j$ be the
+amplitudes of $u$ and $v$ on the constant words with symbol $j$.
+By Cauchy--Schwarz,
+\[
+ d\langle\phi,G\phi\rangle
+ =\left|\sum_j u_jv_j\right|^2
+ \leq \left(\sum_i|u_i|^2\right)\left(\sum_j|v_j|^2\right)
+ =\sum_{i,j}|u_iv_j|^2
+ \leq\langle\phi,P\phi\rangle.
+\]
+The last sum is the mass on the $d^2$ distinct words constant on each
+side of this cut. They all use at most two symbols and hence lie in $P$.
+This argument applies to every possible cut.
+\end{proof}
+
+Put
+\begin{equation}\label{eq:parameters}
+ a=\frac{d-1}{d},\quad b=\frac{(d-1)^2}{d(d-2)},\quad
+ s=\frac{d-1}{d(d-2)}=b-a,\quad
+ D=aG+b(P-G)+Q.
+\end{equation}
+The three summands are supported on mutually orthogonal subspaces.
+Thus $D$ is positive definite and
+\[
+ D^{-1}=\frac d{d-1}G+\frac{d(d-2)}{(d-1)^2}(P-G)+Q.
+\]
+Writing $x=\langle\phi,G\phi\rangle$ and
+$y=\langle\phi,P\phi\rangle$, Lemma~\ref{lem:cut} gives
+\begin{align*}
+ \langle\phi,D^{-1}\phi\rangle
+ &=\frac{d(d-2)}{(d-1)^2}y+\frac d{(d-1)^2}x+(1-y)\\
+ &\leq\frac{d(d-2)+1}{(d-1)^2}y+(1-y)=1.
+\end{align*}
+For any unit $\psi$, weighted Cauchy--Schwarz therefore gives
+\[
+ |\langle\phi,\psi\rangle|^2
+ \leq\langle\phi,D^{-1}\phi\rangle\langle\psi,D\psi\rangle
+ \leq\langle\psi,D\psi\rangle.
+\]
+Maximizing over biseparable $\phi$ yields
+$\EG(\psi)\geq1-\langle\psi,D\psi\rangle$. Direct substitution in
+\eqref{eq:parameters} gives $D=(1+h)I+sW-hQ$. Averaging over any
+pure-state ensemble proves the useful bound
+\begin{equation}\label{eq:certificate}
+ \boxed{\ \EG(\rho)\geq-s\tr(\rho W)+h\tr(\rho Q)-h.\ }
+\end{equation}
+This is an analytic inequality for every density operator on $\mathcal H$.
+It displays information that is absent when only $\tr(\rho W)$ is specified.
+
+\section{An exact witness value and strict separation}
+Let $m=d-1$, $N=m^4+m$, and consider
+\[
+ \ket\chi=\frac1{\sqrt N}\left(m^2\ket0^{\otimes n}
+                          +\sum_{j=1}^{d-1}\ket j^{\otimes n}\right).
+\]
+Across every nontrivial cut, this is a Schmidt decomposition.
+Its squared coefficients are $m^4/N$ and $1/N$, with the latter repeated
+$d-1$ times. The maximal squared overlap
+with a product vector across that cut is its largest squared Schmidt
+coefficient: this follows by applying Cauchy--Schwarz to the diagonal
+Schmidt matrix, whose operator norm is $m^2/\sqrt N$.
+Maximizing over all cuts consequently gives
+\begin{align*}
+ \EG(\chi)&=\frac mN=e_*, & \langle\chi,P\chi\rangle&=1,\\
+ \langle\chi,G\chi\rangle&=\frac{(m^2+m)^2}{dN}=\frac{d-1}{T}, &
+ \langle\chi,W\chi\rangle&=w_*.
+\end{align*}
+The scalar identity $-s w_*-h=e_*$ now determines the optimized witness
+bound exactly. Indeed, \eqref{eq:certificate} and $Q\succeq0$ imply
+$\EG(\psi)\geq-s\langle\psi,W\psi\rangle-h$ for every pure unit vector.
+Hence $\widehat E(-sW)\leq h$, and $\chi$ attains equality. Evaluating
+the witness optimization at $r=-s$ gives $\epsilon(w_*)\geq e_*$.
+Conversely, using $\chi$ in the defining supremum for $\widehat E(rW)$
+gives $rw_*-\widehat E(rW)\leq\EG(\chi)=e_*$ for every real $r$.
+Thus $\epsilon(w_*)=e_*$.
+
+For completeness, $w_*$ lies strictly between $-(d-1)/d$ and $0$:
+the positive difference from the left endpoint is $(d-2)^2/T$.
+Also $k>0$ and $w(1)=(R/d-1)/M\geq0$.
+Since $w(p)$ is affine and strictly increasing, its solution $w(p_*)=w_*$
+lies in $(0,1)$ and has the value in Theorem~\ref{thm:all}.
+Finally, $\tr(\rho(p_*)Q)=p_*(1-R/M)>0$. Substitution in
+\eqref{eq:certificate} proves \eqref{eq:gap}.
+For $n=d=3$, $R=21$, $M=27$, $k=8/9$, $s=2/3$, and $h=1/9$.
+The additional term is $(1/9)(3/8)(6/27)=1/108$, proving
+\eqref{eq:qutrit}. This completes the proof of Theorem~\ref{thm:all}.
+
+\begin{corollary}\label{cor:interval}
+For three qutrits, the inequality
+$\eps^{3,3}(p)<\EG(\rho_{3,3}(p))$ holds throughout
+$27/74<p<9/22$.
+\end{corollary}
+\begin{proof}
+Equation~\eqref{eq:certificate} gives
+$\EG(\rho(p))\geq L(p)=1/3-46p/81$.
+A finite ensemble with witness mean $w$ and entanglement average $u$
+always gives $\epsilon(w)\leq u$: each affine expression defining
+$\epsilon$ is bounded by that average.
+For $0\leq p\leq3/8$, mix $G$ with $\ket\chi\bra\chi$ using weight
+$8p/3$ on the latter. Its witness mean is $w(p)$ and its entanglement
+average is $U_-(p)=2/3-40p/27$, since $\EG(g)=2/3$ and
+$\EG(\chi)=1/9$.
+For $3/8\leq p\leq3/4$, mix $\ket\chi\bra\chi$ with
+$\ket{000}\bra{000}$ using weight $2-8p/3$ on the former.
+Its witness mean is again $w(p)$, and its average is
+$U_+(p)=2/9-8p/27$.
+Now $L-U_-=-1/3+74p/81>0$ for $p>27/74$, and
+$L-U_+=1/9-22p/81>0$ for $p<9/22$.
+The two ranges meet at $p=3/8$, proving the claim.
+\end{proof}
+
+\section{Source coverage and verification scope}
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.37\linewidth}p{0.57\linewidth}@{}}
+\toprule
+Source item in Xu et al.\ \cite{xu} & Coverage here\\
+\midrule
+Section 4.2, p.~12: noisy-GHZ equality & Refuted and replaced by
+Theorem~\ref{thm:all}; Corollary~\ref{cor:interval} gives a noise interval.\\
+Fig.~3: $d=3$, $n=3,5,7,9$ & Theorem~\ref{thm:all} gives a strict gap
+at $p_*$ for each of these cases, and for every $n,d\geq3$.\\
+Fig.~3 caption: qubit witness and fidelity bounds & Proved equal by
+$P=I$ for $d=2$; this identifies the two bounds, not the convex roof.\\
+Eqs.~(24)--(26): witness optimization & At the stated $w_*$, the value
+is exactly $e_*$; the proof uses Eq.~(25)'s definition directly.\\
+Section 3.3, Appendix B.3: witness form & Eq.~\eqref{eq:W} is the
+equal-Schmidt-coefficient specialization of their witness; no optimality
+claim about that witness is contradicted.\\
+Section 3.2 and Appendix B.2: systematic graph-witness improvement & Not covered.\\
+Section 3.4: broad noise-robustness conjecture; Section 4.1: general
+unfaithfulness; Appendix B.4, Eq.~(76): singlet-witness conjecture & Not covered.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The pinned Lean source
+\href{https://github.com/the-omega-institute/trureturing/blob/cc684e6326490f9173bfefcadb0294ee6ccbb0b5/D5/S3/Quantum/Entanglement/Witness/NoisyGhzWitnessBoundGap.lean}{\texttt{NoisyGhzWitnessBoundGap.lean}}
+contains the declaration
+\begin{quote}\small\ttfamily
+D5.S3.Quantum.Entanglement.Witness.\\
+NoisyGhzWitnessBoundGap.result
+\end{quote}
+The source revision is
+\texttt{cc684e6326490f9173bfefcadb0294ee6ccbb0b5}; the module path is
+\nolinkurl{D5/S3/Quantum/Entanglement/Witness/NoisyGhzWitnessBoundGap.lean}.
+The declaration's statement is
+$\neg\,\texttt{claim}$. Here \texttt{claim} is equality for all
+$n,d\geq3$ and all $0\leq p\leq1$.
+Its proof combines \texttt{epsilon\_upper}, the bound
+$\eps^{3,3}(3/8)\leq1/9$, with \texttt{roof\_lower}, the bound
+$13/108\leq\EG(\rho_{3,3}(3/8))$.
+The exact equality $\eps^{3,3}(3/8)=1/9$, the extension to every
+$n,d\geq3$, and Corollary~\ref{cor:interval} are proved in writing above.
+The accompanying \texttt{verify.py} checks the three-qutrit matrices
+with rational arithmetic, enumerates selected finite support ranks, and
+checks the stated scalar identities on explicitly reported finite ranges.
+These finite calculations complement the written all-parameter proof.
+The value of the convex roof itself is bounded, not determined exactly.
+
+\begin{thebibliography}{9}
+\bibitem{xu} X.-Y. Xu, Q. Zhou, S. Zhao, S.-M. Hu, L. Li, N.-L. Liu,
+and K. Chen, \emph{A generic framework for genuine multipartite entanglement
+detection}, \href{https://arxiv.org/abs/2211.05563v1}{arXiv:2211.05563v1}
+(2022), Section 4.2 and Appendix B.3.
+Journal version: \emph{General framework for genuine multipartite entanglement
+detection}, Physical Review A \textbf{107}, 052405 (2023),
+\href{https://doi.org/10.1103/PhysRevA.107.052405}{doi:10.1103/PhysRevA.107.052405}.
+\bibitem{guhne} O. G\"uhne, M. Reimpell, and R. F. Werner,
+\emph{Estimating entanglement measures in experiments},
+Physical Review Letters \textbf{98}, 110502 (2007),
+\href{https://doi.org/10.1103/PhysRevLett.98.110502}{doi:10.1103/PhysRevLett.98.110502}.
+\bibitem{incomplete} O. G\"uhne, M. Reimpell, and R. F. Werner,
+\emph{Lower bounds on entanglement measures from incomplete information},
+\href{https://arxiv.org/abs/0802.1734}{arXiv:0802.1734} (2008), Section II.
+\bibitem{dai} Y. Dai, Y. Dong, Z. Xu, W. You, C. Zhang, and O. G\"uhne,
+\emph{Experimentally accessible lower bounds for genuine multipartite
+entanglement and coherence measures}, Physical Review Applied \textbf{13},
+054022 (2020),
+\href{https://doi.org/10.1103/PhysRevApplied.13.054022}{doi:10.1103/PhysRevApplied.13.054022};
+\href{https://arxiv.org/abs/1810.07492}{arXiv:1810.07492}.
+\end{thebibliography}
+\end{document}

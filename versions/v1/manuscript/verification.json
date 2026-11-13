@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "arithmetic": "exact rational arithmetic with Python standard library",
+  "matrix_dimension": 27,
+  "base_case": {
+    "n": 3,
+    "d": 3,
+    "p": "3/8",
+    "witness_bound": "1/9",
+    "roof_lower_bound": "13/108",
+    "certified_gap": "1/108"
+  },
+  "finite_support_enumerations": [
+    {
+      "n": 3,
+      "d": 3,
+      "rank": 21
+    },
+    {
+      "n": 4,
+      "d": 3,
+      "rank": 45
+    },
+    {
+      "n": 5,
+      "d": 3,
+      "rank": 93
+    },
+    {
+      "n": 6,
+      "d": 3,
+      "rank": 189
+    },
+    {
+      "n": 3,
+      "d": 4,
+      "rank": 40
+    },
+    {
+      "n": 4,
+      "d": 4,
+      "rank": 88
+    },
+    {
+      "n": 5,
+      "d": 4,
+      "rank": 184
+    },
+    {
+      "n": 6,
+      "d": 4,
+      "rank": 376
+    },
+    {
+      "n": 3,
+      "d": 5,
+      "rank": 65
+    },
+    {
+      "n": 4,
+      "d": 5,
+      "rank": 145
+    },
+    {
+      "n": 5,
+      "d": 5,
+      "rank": 305
+    },
+    {
+      "n": 6,
+      "d": 5,
+      "rank": 625
+    }
+  ],
+  "scalar_identity_checks": {
+    "d_min": 3,
+    "d_max": 40,
+    "n_min": 3,
+    "n_max": 12,
+    "cases": 380
+  },
+  "written_proof": "note.tex: Theorem 1 covers every n,d >= 3; Corollary 1 covers the three-qutrit noise interval.",
+  "lean_declaration": "D5.S3.Quantum.Entanglement.Witness.NoisyGhzWitnessBoundGap.result",
+  "lean_statement_scope": "Negation of universal equality, via the three-qutrit bounds 1/9 and 13/108."
+}
