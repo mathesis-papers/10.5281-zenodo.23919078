@@ -1,7 +1,7 @@
 {
   "git_blobs": {
     ".github/workflows/pages.yml": "7879724db1358178aad7e9bed326a44be44f5a6a",
-    ".mathesis/generated.json": "24d307c0db3a6a6b15f96eaddf45faa932da0e07",
+    ".mathesis/generated.json": "b9cc8f3afd52b1f675db3446b6162861552eccbd",
     "CHANGELOG.md": "60c64a4944750f0e9d611d06b57d29f205356526",
     "CITATION.cff": "ed5dba34f4052ac6e7bae977244c6fa8bcdd1b38",
     "CONTRIBUTING.md": "ea69168fc2cb506b57b00de1ef588aaf011aa3da",
@@ -13,12 +13,13 @@
     "manuscript/note.tex": "bd4198511a57118e3629190a2daf4310b63914bb",
     "manuscript/verification.json": "85b1e8227e961f033576483dd66bdb4a9156d750",
     "manuscript/verify.py": "53c7dd795e87ff098c4ded16b59e562627514caa",
-    "paper.json": "65f0fcb00987b83c45de35d06ebd6ee207d12cde",
+    "paper.json": "082248589a50885b724f0b804496c94c99001aee",
     "paper.pdf": "7f28ad964945e20cb9dd4a4953365b1ab2dbaec2",
     "site/en/index.html": "7c018dc80cd7ba7a2a878c46067e9b2272efc4cd",
-    "site/index.html": "9c159cc0b1b64b7ac2a57f1cac35023a37f229c3",
+    "site/index.html": "d8750b80ee61a973b18e80d059712a7b7a806a9a",
     "site/mathesis-materials.json": "614a79b0a4b6026eaba72cada3cf7f955eec3e76",
     "site/zh/index.html": "8b34e8f488e467adc109613e4844f8c51c433302",
+    "source.archive": "e25162b222b03d54bdd3a8865a3418b334452acc",
     "versions/v1/.mathesis/generated.json": "d77a808ea10f817975f9dca9c725c4a7632f72f9",
     "versions/v1/CHANGELOG.md": "60c64a4944750f0e9d611d06b57d29f205356526",
     "versions/v1/CITATION.cff": "ed5dba34f4052ac6e7bae977244c6fa8bcdd1b38",
@@ -32,12 +33,13 @@
     "versions/v1/manuscript/verification.json": "85b1e8227e961f033576483dd66bdb4a9156d750",
     "versions/v1/manuscript/verify.py": "53c7dd795e87ff098c4ded16b59e562627514caa",
     "versions/v1/paper.json": "343813a5257ce828b83dac77ab58f3916c5ff73f",
-    "versions/v1/paper.pdf": "7f28ad964945e20cb9dd4a4953365b1ab2dbaec2"
+    "versions/v1/paper.pdf": "7f28ad964945e20cb9dd4a4953365b1ab2dbaec2",
+    "versions/v1/source.archive": "e25162b222b03d54bdd3a8865a3418b334452acc"
   },
   "schema": "mathesis.paper-collection.v1",
   "sha256": {
     ".github/workflows/pages.yml": "f15d983dcb8f324ffdedb50b05f7380e11fda8723d49b5c8f10ef0f414612372",
-    ".mathesis/generated.json": "9855b29bd0339d4fb01de200337aa6e20ec0324073ccfa7cfe00ccde11278a03",
+    ".mathesis/generated.json": "3ef24108555a63101e4aaa2166ef834aa7022724f0d2268d3ea47e8d5df07d8f",
     "CHANGELOG.md": "4f25f5aeadea01cbcdefacfd4e32bb2701ff3ffc2af75e1fbd9dedd37c9cd92f",
     "CITATION.cff": "a93d61eb51336b169ee3dc2f36466a96bda1ad7a5ed87ef5b7ca81e496517aa6",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
@@ -49,12 +51,13 @@
     "manuscript/note.tex": "27b8d6e9e87091fc2c89a500c8c3a6c55120b2f81846bf6a725a45d040d0db78",
     "manuscript/verification.json": "b5d88dca2cdf05b7dec643486f40e64bf0dad7f3dfc4ec795987527257f0b089",
     "manuscript/verify.py": "c782d680e0fcf71e28e20d93bd2b7465e85fadb104bc4cfed2d7aa2695e485dd",
-    "paper.json": "8bc3a6227aee1998ec51389cbb7fd909092bb74a0bcea90511b293a15284ea0c",
+    "paper.json": "755978c84d12eb24703a4028e0388d80b3de93068107641bd984d3188b9a990e",
     "paper.pdf": "e7e900847d74441093a70f26d84d41963a0a678e7e1f24ef198ecdc5f3425178",
     "site/en/index.html": "0c555c9fc7d7fcb73d7a0a2d0ca6596ccece88bf92736b1c5570476f8e142cd4",
-    "site/index.html": "e1fefa65709b3021792d2c4af85f9b01e543be0e77b4cdd0bb3ac8d91c4c1ff0",
+    "site/index.html": "77cb8f5aa78b28cd4a3b583ea521ae1e852ed47f70885de8da502463a6e5602f",
     "site/mathesis-materials.json": "b4a7bc86d558f158f6eed723983aebbb487a27cea59f61a076a45246127ae61e",
     "site/zh/index.html": "509cd8ff65865cc04d9dc68077b320930fcb5d4797631cd77f159d311a6d3092",
+    "source.archive": "c4335e273e615af20ffbd3f336bbdbb35f8fc6ce1b20713ac48000a4bd6b6ffc",
     "versions/v1/.mathesis/generated.json": "3ec38e13e9825883858cc3ec65ed22bca5da91d3cea74d175049444a3c407df7",
     "versions/v1/CHANGELOG.md": "4f25f5aeadea01cbcdefacfd4e32bb2701ff3ffc2af75e1fbd9dedd37c9cd92f",
     "versions/v1/CITATION.cff": "a93d61eb51336b169ee3dc2f36466a96bda1ad7a5ed87ef5b7ca81e496517aa6",
@@ -68,7 +71,8 @@
     "versions/v1/manuscript/verification.json": "b5d88dca2cdf05b7dec643486f40e64bf0dad7f3dfc4ec795987527257f0b089",
     "versions/v1/manuscript/verify.py": "c782d680e0fcf71e28e20d93bd2b7465e85fadb104bc4cfed2d7aa2695e485dd",
     "versions/v1/paper.json": "2ff49abcae5019b57fc5ba9463044c60a3c65b73fb4173c133af8bf7333e3d5f",
-    "versions/v1/paper.pdf": "e7e900847d74441093a70f26d84d41963a0a678e7e1f24ef198ecdc5f3425178"
+    "versions/v1/paper.pdf": "e7e900847d74441093a70f26d84d41963a0a678e7e1f24ef198ecdc5f3425178",
+    "versions/v1/source.archive": "c4335e273e615af20ffbd3f336bbdbb35f8fc6ce1b20713ac48000a4bd6b6ffc"
   },
   "version": 1,
   "work": "xu-et-al-2023-noisy-ghz-witness-bound-gap"
