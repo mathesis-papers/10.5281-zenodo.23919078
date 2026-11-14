@@ -2,12 +2,12 @@
   "schema": "mathesis.materials.v1",
   "work": "xu-et-al-2023-noisy-ghz-witness-bound-gap",
   "version": 1,
-  "repository_url": "https://github.com/mathesis-papers/6aec3852e0e3a8013bcd1496",
-  "site_url": "https://papers.trureturing.org/6aec3852e0e3a8013bcd1496/",
+  "repository_url": "https://github.com/mathesis-papers/10.5281-zenodo.23919078",
+  "site_url": "https://papers.trureturing.org/10.5281-zenodo.23919078/",
   "doi": "10.5281/zenodo.23919079",
   "reading": {
-    "en": "https://papers.trureturing.org/6aec3852e0e3a8013bcd1496/en/",
-    "zh": "https://papers.trureturing.org/6aec3852e0e3a8013bcd1496/zh/"
+    "en": "https://papers.trureturing.org/10.5281-zenodo.23919078/en/",
+    "zh": "https://papers.trureturing.org/10.5281-zenodo.23919078/zh/"
   },
   "slides": [],
   "visualizations": []
