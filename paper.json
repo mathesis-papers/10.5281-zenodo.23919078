@@ -2,16 +2,16 @@
   "files": {
     "pdf": {
       "bytes": 85757,
-      "matches_public": null,
+      "matches_public": true,
       "path": "paper.pdf",
-      "public_sha256": null,
+      "public_sha256": "e7e900847d74441093a70f26d84d41963a0a678e7e1f24ef198ecdc5f3425178",
       "sha256": "e7e900847d74441093a70f26d84d41963a0a678e7e1f24ef198ecdc5f3425178"
     },
     "source": {
       "bytes": 10796,
-      "matches_public": null,
+      "matches_public": true,
       "path": "source.archive",
-      "public_sha256": null,
+      "public_sha256": "c4335e273e615af20ffbd3f336bbdbb35f8fc6ce1b20713ac48000a4bd6b6ffc",
       "sha256": "c4335e273e615af20ffbd3f336bbdbb35f8fc6ce1b20713ac48000a4bd6b6ffc"
     }
   },
@@ -38,6 +38,8 @@
     "license": "CC-BY-4.0",
     "msc": [],
     "pdf": {
+      "bytes": 85757,
+      "sha256": "e7e900847d74441093a70f26d84d41963a0a678e7e1f24ef198ecdc5f3425178",
       "url": "/api/v1/collected-papers/xu-et-al-2023-noisy-ghz-witness-bound-gap/files/pdf?version=1"
     },
     "previous_version": null,
@@ -46,6 +48,8 @@
     "record": "xu-et-al-2023-noisy-ghz-witness-bound-gap",
     "repository_name": "10.5281-zenodo.23919078",
     "source": {
+      "bytes": 10796,
+      "sha256": "c4335e273e615af20ffbd3f336bbdbb35f8fc6ce1b20713ac48000a4bd6b6ffc",
       "url": "/api/v1/collected-papers/xu-et-al-2023-noisy-ghz-witness-bound-gap/files/source?version=1"
     },
     "title": "A strict gap in the noisy-GHZ equality question of Xu et al., Section 4.2, page 12 of arXiv:2211.05563v1",
